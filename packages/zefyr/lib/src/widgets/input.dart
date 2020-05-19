@@ -61,6 +61,13 @@ class InputConnectionController implements TextInputClient {
       _sentRemoteValues.clear();
     }
   }
+   
+  //to keep the compiler happy
+  @override AutofillScope get currentAutofillScope => null;
+  //to keep the compiler happy
+  @override
+  showAutocorrectionPromptRect(int start,int end){
+  }
 
   /// Updates remote value based on current state of [document] and
   /// [selection].
