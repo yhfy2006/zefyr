@@ -232,6 +232,7 @@ class BlockTheme {
       case TargetPlatform.iOS:
         fontFamily = 'Menlo';
         break;
+      case TargetPlatform.macOS:
       case TargetPlatform.android:
       case TargetPlatform.fuchsia:
         fontFamily = 'Roboto Mono';

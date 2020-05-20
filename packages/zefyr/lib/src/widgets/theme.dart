@@ -336,6 +336,7 @@ class AttributeTheme {
       case TargetPlatform.iOS:
         monospaceFontFamily = 'Menlo';
         break;
+      case TargetPlatform.macOS:
       case TargetPlatform.android:
       case TargetPlatform.fuchsia:
         monospaceFontFamily = 'Roboto Mono';
