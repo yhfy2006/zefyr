@@ -63,7 +63,8 @@ class InputConnectionController implements TextInputClient {
   }
    
   //to keep the compiler happy
-  @override AutofillScope get currentAutofillScope => null;
+  // @override AutofillScope get currentAutofillScope => null;
+
   //to keep the compiler happy
   @override
   showAutocorrectionPromptRect(int start,int end){
