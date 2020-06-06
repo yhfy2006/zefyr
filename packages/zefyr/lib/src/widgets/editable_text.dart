@@ -41,6 +41,7 @@ class ZefyrEditableText extends StatefulWidget {
     this.padding = const EdgeInsets.symmetric(horizontal: 16.0),
     this.physics,
     this.keyboardAppearance = Brightness.light,
+    this.headerWidget = null
   })  : assert(mode != null),
         assert(controller != null),
         assert(focusNode != null),
@@ -83,6 +84,9 @@ class ZefyrEditableText extends StatefulWidget {
   ///
   /// If unset, defaults to the brightness of [Brightness.light].
   final Brightness keyboardAppearance;
+
+  // header widgets
+  final Widget headerWidget;
 
   @override
   _ZefyrEditableTextState createState() => _ZefyrEditableTextState();
@@ -230,6 +234,8 @@ class _ZefyrEditableTextState extends State<ZefyrEditableText>
 
   List<Widget> _buildChildren(BuildContext context) {
     final result = <Widget>[];
+    if(widget.headerWidget != null) result.add(widget.headerWidget);
+
     for (var node in document.root.children) {
       result.add(_defaultChildBuilder(context, node));
     }

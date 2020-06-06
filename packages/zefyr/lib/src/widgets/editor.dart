@@ -28,6 +28,7 @@ class ZefyrEditor extends StatefulWidget {
     this.selectionControls,
     this.physics,
     this.keyboardAppearance,
+    this.headerWidget = null,
   })  : assert(mode != null),
         assert(controller != null),
         assert(focusNode != null),
@@ -76,6 +77,8 @@ class ZefyrEditor extends StatefulWidget {
   ///
   /// If unset, defaults to the brightness of [ThemeData.primaryColorBrightness].
   final Brightness keyboardAppearance;
+
+  final Widget headerWidget;
 
   @override
   _ZefyrEditorState createState() => _ZefyrEditorState();
@@ -200,6 +203,7 @@ class _ZefyrEditorState extends State<ZefyrEditor> {
       padding: widget.padding,
       physics: widget.physics,
       keyboardAppearance: keyboardAppearance,
+      headerWidget: widget.headerWidget,
     );
 
     return ZefyrTheme(

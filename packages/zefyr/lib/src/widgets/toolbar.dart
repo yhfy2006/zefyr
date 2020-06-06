@@ -218,13 +218,13 @@ class ZefyrToolbarState extends State<ZefyrToolbar>
 
     // Must set unique key for the toolbar to prevent it from reconstructing
     // new state each time we toggle overlay.
-    final toolbar = ZefyrToolbarScaffold(
-      key: _toolbarKey,
-      body: ZefyrButtonList(buttons: _buildButtons(context)),
-      trailing: buildButton(context, ZefyrToolbarAction.hideKeyboard),
-    );
+    // final toolbar = ZefyrToolbarScaffold(
+    //   key: _toolbarKey,
+    //   body: ZefyrButtonList(buttons: _buildButtons(context)),
+    //   trailing: buildButton(context, ZefyrToolbarAction.hideKeyboard),
+    // );
 
-    layers.add(toolbar);
+    // layers.add(toolbar);
 
     if (hasOverlay) {
       Widget widget = Builder(builder: _overlayBuilder);
